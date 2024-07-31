@@ -12,6 +12,9 @@
 #define HEIGHT 10
 #define QUEUE_MAX 100
 
+#define START_X 1
+#define START_Y 2
+
 // Represents a position and if it has been visited
 typedef struct Point {
   int x;
@@ -49,7 +52,7 @@ const int positions[4][2] = {
 };
 
 int main() { 
-  Point startPos = { 2, 1 };
+  Point startPos = { START_Y, START_X };
   push(&startPos);
 
   while(front != back) {
